@@ -12,12 +12,7 @@ def main():
 
 def show_home():
     # Titre de la page
-    st.title("🚀 Projet de Simulation Financière Ultra-Avancé : Fonctionnalités Complètes")
-
-    # Introduction
-    st.markdown("""
-    Pour obtenir un projet exceptionnellement performant et complet, intégrant toutes les fonctionnalités essentielles et avancées de la finance quantitative, voici une liste exhaustive des fonctionnalités à inclure.
-    """)
+    st.title("🚀 Projet de monte carlo : ENSA AGADIR-FID")
 
     # Séparation des sections avec des sous-titres
     st.subheader("📊 1. Simulations Stochastiques Avancées")
@@ -111,16 +106,7 @@ def show_home():
     • Gestion des ordres en temps réel via des API de trading (Binance, Interactive Brokers)
     """)
 
-    # Section pour les modèles économétriques et statistiques
-    st.subheader("📉 5. Modèles Économétriques et Statistiques")
 
-    st.markdown("""
-    • Modèles ARIMA, SARIMA pour la prévision des séries temporelles  
-    • Modèles GARCH, EGARCH, TGARCH pour la modélisation de la volatilité  
-    • Processus de Markov Cachés (HMM) pour la détection des régimes de marché  
-    • Copules pour la modélisation de la dépendance entre actifs  
-    • Test de Cointegration (Johansen, Engle-Granger)
-    """)
 
     # Conclusion et objectif final
     st.subheader("🎯 Objectif Final")
