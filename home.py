@@ -82,36 +82,6 @@ def show_home():
     </ul>
     """, unsafe_allow_html=True)
 
-    # Ajouter une simulation de graphique interactif pour une meilleure expérience
-    st.write("""<h3 style='text-align: center; color: #0066CC; animation: fadeIn 3s;'>Simulation de Mouvement Brownien</h3>""",
-             unsafe_allow_html=True)
-    
-    # Paramètres de simulation
-    initial_price = st.slider('Prix initial de l\'actif', min_value=50, max_value=200, value=100)
-    volatility = st.slider('Volatilité', min_value=0.01, max_value=0.5, value=0.2)
-    drift = st.slider('Taux de rentabilité (drift)', min_value=0.01, max_value=0.2, value=0.05)
-    time_horizon = st.slider('Horizon temporel (années)', min_value=1, max_value=10, value=1)
-    num_simulations = st.slider('Nombre de simulations', min_value=1, max_value=10, value=3)
-    
-    # Simulation de trajectoires de prix
-    time_steps = 252  # Nombre de jours de bourse dans une année
-    dt = time_horizon / time_steps
-    time_index = np.linspace(0, time_horizon, time_steps)
-    
-    fig, ax = plt.subplots(figsize=(10, 6))
-
-    for _ in range(num_simulations):
-        price_path = [initial_price]
-        for t in range(1, time_steps):
-            price_path.append(price_path[-1] * np.exp((drift - 0.5 * volatility ** 2) * dt + volatility * np.sqrt(dt) * np.random.normal()))
-        ax.plot(time_index, price_path, label=f'Simulation {_+1}')
-    
-    ax.set_title('Simulations de Mouvement Brownien', fontsize=16)
-    ax.set_xlabel('Temps (Années)')
-    ax.set_ylabel('Prix')
-    ax.legend()
-    
-    st.pyplot(fig)
 
 if __name__ == "__main__":
     main()
