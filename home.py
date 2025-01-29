@@ -12,7 +12,7 @@ def main():
 
 def show_home():
     # Titre de la page
-    st.title("🚀 Projet de monte carlo : ENSA AGADIR-FID (version test)")
+    st.title("Projet de monte carlo : ENSA AGADIR-FID (version test)")
 
     # Séparation des sections avec des sous-titres
     st.subheader("📊 1. Simulations Stochastiques Avancées")
